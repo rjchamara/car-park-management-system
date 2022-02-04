@@ -16,7 +16,7 @@ import java.util.HashMap;
         public void enter(){ //enter all car owner details
 
 
-            carowner.put(ownerid, new ArrayList<>());
+            carowner.put(ownerid, new ArrayList<>()); // add details to array
             carowner.get(ownerid).add("owner id : "+ownerid);
             carowner.get(ownerid).add("mobile number : "+mobile);
             carowner.get(ownerid).add("vehicle number : "+vehiclenumber);
@@ -31,5 +31,5 @@ import java.util.HashMap;
         }
 
         }
-        
+
 

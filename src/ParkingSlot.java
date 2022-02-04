@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.HashMap;
 
-    public class ParkingSlot {
+    public class ParkingSlot { // parking slot class
         String slotid;
         String slotgps;
         String slotindicator;
@@ -11,7 +11,7 @@ import java.util.HashMap;
         HashMap<String, ArrayList<String>> parkingslot = new HashMap<>();
         HashMap<String, String> allslots = new HashMap<>();
 
-        public void addslot(){
+        public void addslot(){ //add sloat for park
 
             allslots.put(slotid+"("+slottype+")",parkingslotindicator);
             parkingslot.put(slotid, new ArrayList<>());// then simply access it with
@@ -21,18 +21,18 @@ import java.util.HashMap;
             parkingslot.get(slotid).add("Other information : "+slotimformation);
         }
 
-        public void allslots() {
+        public void allslots() { //view all slots in park
 
             for (String i : allslots.keySet()) {
                 System.out.println(i + " ---> " + allslots.get(i));
             }
         }
 
-        public void bookslot(){
+        public void bookslot(){ // book a slot
             allslots.put(slotid+"("+slottype+")","Unavailable");
         }
 
-        public void exitslot() {
+        public void exitslot() { // exit from slot
             allslots.put(slotid+"("+slottype+")","Available");
         }
 
