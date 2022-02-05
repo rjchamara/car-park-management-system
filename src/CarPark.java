@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class CarPark { //carpark class
+public class CarPark {
     String faculty;
     String parkid;
     String entrancegps;
