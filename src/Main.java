@@ -63,6 +63,8 @@ public class Main {
         medi.exitgps = "6.9360° N, 79.8486° E";
         medi.addpark();
 
+        ParkingSlot medislots = new ParkingSlot(); // add slots for medicine faculty car park
+
         CarPark arts = new CarPark(); //add arts faculty car park
 
         arts.faculty = "Faculty of Arts";
@@ -70,6 +72,7 @@ public class Main {
         arts.entrancegps = "6.9364° N, 79.8486° E";
         arts.exitgps = "6.9360° N, 79.8486° E";
         arts.addpark();
+
 	
     }
 }
