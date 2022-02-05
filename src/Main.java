@@ -31,6 +31,14 @@ public class Main {
             checktechslot.add(techslots.slotid);
             checktechpark.add(techslots.slotid);
 
+            techslots.slotid = "ts2";
+            techslots.slottype = "standard";
+            techslots.slotimformation = "----";
+            techslots.slotgps = "6.9364° N, 79.8487° E";
+            techslots.addslot();
+            checktechslot.add(techslots.slotid);
+            checktechpark.add(techslots.slotid);
+
         CarPark medi = new CarPark(); //medicine faculty car park
 
         medi.faculty = "Faculty of Medicine";
