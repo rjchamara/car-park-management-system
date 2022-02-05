@@ -105,6 +105,8 @@ public class Main {
         arts.exitgps = "6.9360° N, 79.8486° E";
         arts.addpark();
 
+        ParkingSlot artsslots = new ParkingSlot(); //add slots for arts faculty car park
+
 	
     }
 }
