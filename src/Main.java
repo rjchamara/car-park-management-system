@@ -28,6 +28,14 @@ public class Main {
         medi.entrancegps = "6.9364° N, 79.8486° E";
         medi.exitgps = "6.9360° N, 79.8486° E";
         medi.addpark();
+
+        CarPark arts = new CarPark(); //add arts faculty car park
+
+        arts.faculty = "Faculty of Arts";
+        arts.parkid = "arts1";
+        arts.entrancegps = "6.9364° N, 79.8486° E";
+        arts.exitgps = "6.9360° N, 79.8486° E";
+        arts.addpark();
 	
     }
 }
