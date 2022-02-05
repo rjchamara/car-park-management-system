@@ -167,7 +167,7 @@ public class Main {
 
                 int staffwork = myObj.nextInt();
 
-                if (staffwork == 1) {
+                if (staffwork == 1) { //add car owner part
                     Scanner detail = new Scanner(System.in);
                     System.out.println("Enter car owner ID.");
                     String ownerid = detail.nextLine();
@@ -179,9 +179,50 @@ public class Main {
                     owner.mobile = mobile;
                     owner.vehiclenumber = vehiclenumber;
                     owner.enter();
-                }else if (staffwork == 2) {
+                }else if (staffwork == 2) { //view all owners part
                     owner.details();
 
+                }else if (staffwork == 3) { //view park
+
+
+                    if (checktechpark.size() == 0) {
+                        tech.parkindicator = "Parking full..!!";
+                        tech.addpark();
+                        tech.park();
+                        techslots.allslots();
+
+                    } else {
+                        tech.parkindicator = "Parking Available..!!";
+                        tech.addpark();
+                        tech.park();
+                        techslots.allslots();
+                    }
+
+                    if (checkmedipark.size() == 0) {
+                        medi.parkindicator = "Parking full..!!";
+                        medi.addpark();
+                        medi.park();
+                        medislots.allslots();
+
+                    } else {
+                        medi.parkindicator = "Parking Available..!!";
+                        medi.addpark();
+                        medi.park();
+                        medislots.allslots();
+                    }
+
+                    if (checkartspark.size() == 0) {
+                        arts.parkindicator = "Parking full..!!";
+                        arts.addpark();
+                        arts.park();
+                        artsslots.allslots();
+
+                    } else {
+                        arts.parkindicator = "Parking Available..!!";
+                        arts.addpark();
+                        arts.park();
+                        artsslots.allslots();
+                    }
                 }
 
 
