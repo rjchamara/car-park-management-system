@@ -21,6 +21,8 @@ public class Main {
         tech.parkindicator="Parking Available..!!";
         tech.addpark();
 
+        ParkingSlot techslots = new ParkingSlot(); // add slots for technology faculty car park
+
         CarPark medi = new CarPark(); //medicine faculty car park
 
         medi.faculty = "Faculty of Medicine";
