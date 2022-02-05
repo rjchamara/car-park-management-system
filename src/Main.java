@@ -107,6 +107,14 @@ public class Main {
 
         ParkingSlot artsslots = new ParkingSlot(); //add slots for arts faculty car park
 
+            artsslots.slotid = "as1";
+            artsslots.slottype = "standard";
+            artsslots.slotimformation = "----";
+            artsslots.slotgps = "6.9364° N, 79.8487° E";
+            artsslots.addslot();
+            checkartsslot.add(artsslots.slotid);
+            checkartspark.add(artsslots.slotid);
+
 	
     }
 }
