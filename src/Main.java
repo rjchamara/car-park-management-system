@@ -165,6 +165,22 @@ public class Main {
                 System.out.println("4 back.");
                 System.out.println("what do you want ?");
 
+                int staffwork = myObj.nextInt();
+
+                if (staffwork == 1) {
+                    Scanner detail = new Scanner(System.in);
+                    System.out.println("Enter car owner ID.");
+                    String ownerid = detail.nextLine();
+                    System.out.println("Enter car owner mobile number.");
+                    String mobile = detail.nextLine();
+                    System.out.println("Enter vehicle number.");
+                    String vehiclenumber = detail.nextLine();
+                    owner.ownerid = ownerid;
+                    owner.mobile = mobile;
+                    owner.vehiclenumber = vehiclenumber;
+                    owner.enter();
+                }
+
 
             }
         }
