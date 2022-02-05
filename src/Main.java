@@ -123,6 +123,14 @@ public class Main {
             checkartsslot.add(artsslots.slotid);
             checkartspark.add(artsslots.slotid);
 
+        artsslots.slotid = "as3";
+        artsslots.slotgps = "6.9364° N, 79.8487° E";
+        artsslots.slottype = "standard";
+        artsslots.slotimformation = "----";
+        artsslots.addslot();
+        checkartsslot.add(artsslots.slotid);
+        checkartspark.add(artsslots.slotid);
+
 	
     }
 }
