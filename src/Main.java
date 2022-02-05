@@ -73,6 +73,14 @@ public class Main {
             checkmedislot.add(medislots.slotid);
             checkmedipark.add(medislots.slotid);
 
+            medislots.slotid = "ms2";
+            medislots.slotgps = "6.9364° N, 79.8487° E";
+            medislots.slottype = "standard";
+            medislots.slotimformation = "----";
+            medislots.addslot();
+            checkmedislot.add(medislots.slotid);
+            checkmedipark.add(medislots.slotid);
+
         CarPark arts = new CarPark(); //add arts faculty car park
 
         arts.faculty = "Faculty of Arts";
