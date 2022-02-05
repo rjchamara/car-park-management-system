@@ -20,6 +20,14 @@ public class Main {
         tech.exitgps = "6.9360° N, 79.8486° E";
         tech.parkindicator="Parking Available..!!";
         tech.addpark();
+
+        CarPark medi = new CarPark(); //medicine faculty car park
+
+        medi.faculty = "Faculty of Medicine";
+        medi.parkid = "medi1";
+        medi.entrancegps = "6.9364° N, 79.8486° E";
+        medi.exitgps = "6.9360° N, 79.8486° E";
+        medi.addpark();
 	
     }
 }
