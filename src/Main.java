@@ -179,7 +179,11 @@ public class Main {
                     owner.mobile = mobile;
                     owner.vehiclenumber = vehiclenumber;
                     owner.enter();
+                }else if (staffwork == 2) {
+                    owner.details();
+
                 }
+
 
 
             }
