@@ -13,7 +13,7 @@ import java.util.HashMap;
 
         public void addslot(){ //add sloat for park
 
-            allslots.put(slotid+"("+slottype+")",parkingslotindicator);
+            allslots.put(slotid,parkingslotindicator);
             parkingslot.put(slotid, new ArrayList<>());// then simply access it with
             parkingslot.get(slotid).add("Slot id : "+slotid);
             parkingslot.get(slotid).add("Slot type : "+slottype);
@@ -29,11 +29,11 @@ import java.util.HashMap;
         }
 
         public void bookslot(){ // book a slot
-            allslots.put(slotid+"("+slottype+")","Unavailable");
+            allslots.put(slotid,"Unavailable");
         }
 
         public void exitslot() { // exit from slot
-            allslots.put(slotid+"("+slottype+")","Available");
+            allslots.put(slotid,"Available");
         }
 
         public void slotdetails(){
