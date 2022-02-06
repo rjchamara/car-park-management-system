@@ -404,6 +404,31 @@ public class Main {
                         arts.park();
                         artsslots.allslots();
                     }
+                }else if (carownerwork == 2) { //select park
+                    /*this is the part that selecting a slot according to car owner inputs*/
+                    Scanner slotidbook = new Scanner(System.in);
+                    System.out.println("Enter slot id.");
+                    String slotid = slotidbook.nextLine();
+
+                    if (checktechslot.contains(slotid)) {
+                        techslots.slotid = slotid;
+                        techslots.bookslot();
+                        checktechpark.remove(slotid);
+                    } else if (checkmedislot.contains(slotid)) {
+                        medislots.slotid = slotid;
+                        medislots.bookslot();
+                        checkmedipark.remove(slotid);
+                    }
+                    else if (checkartsslot.contains(slotid)) {
+                        artsslots.slotid = slotid;
+                        artsslots.bookslot();
+                        checkartspark.remove(slotid);
+                    }
+                    else {
+                        System.out.println("invalid id..!!");
+                    }
+
+
                 }
             }
         }
