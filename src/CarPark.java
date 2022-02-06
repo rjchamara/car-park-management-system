@@ -12,7 +12,7 @@ public class CarPark { // car park class
 
     public void addpark(){ // method for add car park and set availability of park
 
-        allparks.put(faculty+" Park. "+"(ID : "+parkid+")",parkindicator);
+        allparks.put(faculty+", Park. "+"(ID: "+parkid+", Entrance: "+entrancegps+", Exit: "+exitgps+")",parkindicator);
 
     }
 
