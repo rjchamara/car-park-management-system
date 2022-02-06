@@ -30,6 +30,11 @@ import java.util.HashMap;
 
         }
 
+        public void removeowner(){
+            carowner.remove(ownerid);
+
+        }
+
         }
 
 
