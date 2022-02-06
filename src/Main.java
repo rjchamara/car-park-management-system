@@ -276,12 +276,14 @@ public class Main {
                             tech.parkindicator = "Parking full..!!";
                             tech.addpark();
                             tech.park();
+                            System.out.println("[ts# --> Standard, th# --> Handicapped, tl# --> Long vehicle]");
                             techslots.allslots();
 
                         } else {
                             tech.parkindicator = "Parking Available..!!";
                             tech.addpark();
                             tech.park();
+                            System.out.println("[ts# --> Standard, th# --> Handicapped, tl# --> Long vehicle]");
                             techslots.allslots();
                         }
 
@@ -289,12 +291,14 @@ public class Main {
                             medi.parkindicator = "Parking full..!!";
                             medi.addpark();
                             medi.park();
+                            System.out.println("[ms# --> Standard, mh# --> Handicapped, ml# --> Long vehicle]");
                             medislots.allslots();
 
                         } else {
                             medi.parkindicator = "Parking Available..!!";
                             medi.addpark();
                             medi.park();
+                            System.out.println("[ms# --> Standard, mh# --> Handicapped, ml# --> Long vehicle]");
                             medislots.allslots();
                         }
 
@@ -302,12 +306,14 @@ public class Main {
                             arts.parkindicator = "Parking full..!!";
                             arts.addpark();
                             arts.park();
+                            System.out.println("[as# --> Standard, ah# --> Handicapped, al# --> Long vehicle]");
                             artsslots.allslots();
 
                         } else {
                             arts.parkindicator = "Parking Available..!!";
                             arts.addpark();
                             arts.park();
+                            System.out.println("[as# --> Standard, ah# --> Handicapped, al# --> Long vehicle]");
                             artsslots.allslots();
                         }
                     } else if (staffwork == 4) {
@@ -364,12 +370,14 @@ public class Main {
                             tech.parkindicator = "Parking full..!!";
                             tech.addpark();
                             tech.park();
+                            System.out.println("[ts# --> Standard, th# --> Handicapped, tl# --> Long vehicle]");
                             techslots.allslots();
 
                         } else {
                             tech.parkindicator = "Parking Available..!!";
                             tech.addpark();
                             tech.park();
+                            System.out.println("[ts# --> Standard, th# --> Handicapped, tl# --> Long vehicle]");
                             techslots.allslots();
                         }
 
@@ -377,12 +385,14 @@ public class Main {
                             medi.parkindicator = "Parking full..!!";
                             medi.addpark();
                             medi.park();
+                            System.out.println("[ms# --> Standard, mh# --> Handicapped, ml# --> Long vehicle]");
                             medislots.allslots();
 
                         } else {
                             medi.parkindicator = "Parking Available..!!";
                             medi.addpark();
                             medi.park();
+                            System.out.println("[ms# --> Standard, mh# --> Handicapped, ml# --> Long vehicle]");
                             medislots.allslots();
                         }
 
@@ -390,17 +400,19 @@ public class Main {
                             arts.parkindicator = "Parking full..!!";
                             arts.addpark();
                             arts.park();
+                            System.out.println("[as# --> Standard, ah# --> Handicapped, al# --> Long vehicle]");
                             artsslots.allslots();
 
                         } else {
                             arts.parkindicator = "Parking Available..!!";
                             arts.addpark();
                             arts.park();
+                            System.out.println("[as# --> Standard, ah# --> Handicapped, al# --> Long vehicle]");
                             artsslots.allslots();
                         }
                     } else if (carownerwork == 2) { //select slot
                         /*check car owner id when user select slot*/
-                        /*int l = 1;
+                        int l = 1;
                         while (l == 1) {
                             Scanner owneridbook = new Scanner(System.in);
                             System.out.println("Enter your id.");
@@ -412,7 +424,7 @@ public class Main {
                                 System.out.println("check your ID and enter again..!!");
                                 l = 1;
                             }
-                        }*/
+                        }
                         /*this is the part that selecting a slot according to car owner inputs*/
                         Scanner slotidbook = new Scanner(System.in);
                         System.out.println("Enter slot id.");
