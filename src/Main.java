@@ -190,9 +190,10 @@ public class Main {
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
 
         while (true) {
+            System.out.println("-------------------------------------------------------------------------------------------");
             System.out.println("1 Staff member."); // selecting part of car owner and staff
             System.out.println("2 Car owner.");
-
+            System.out.println("-------------------------------------------------------------------------------------------");
 
             System.out.println("Are you ?");
             int user = myObj.nextInt();
@@ -204,6 +205,7 @@ public class Main {
                 while (j == 1) {
                     /*this is staff password checking part*/
                     Scanner staffpw = new Scanner(System.in);
+                    System.out.println("-------------------------------------------------------------------------------------------");
                     System.out.println("Enter your Password.");
                     String pw = staffpw.nextLine();
 
@@ -211,8 +213,10 @@ public class Main {
                         j = 0;
                     } else {
                         System.out.println("Your password is incorrect..!!");
+                        System.out.println("-------------------------------------------------------------------------------------------");
                         System.out.println("1 Enter again.");
                         System.out.println("2 Back");
+                        System.out.println("-------------------------------------------------------------------------------------------");
                         System.out.println("What do you want?");
                         Scanner pwback = new Scanner(System.in);
                         int pwb = pwback.nextInt();
@@ -233,11 +237,13 @@ public class Main {
                     }
 
                     /*this is a selecting part of staff's work*/
+                    System.out.println("-------------------------------------------------------------------------------------------");
                     System.out.println("1 Add car owner.");
                     System.out.println("2 View all owners.");
                     System.out.println("3 View park.");
                     System.out.println("4 Change password.");
                     System.out.println("5 Back.");
+                    System.out.println("-------------------------------------------------------------------------------------------");
                     System.out.println("What do you want ?");
 
                     int staffwork = myObj.nextInt();
@@ -265,45 +271,63 @@ public class Main {
                         if (checktechpark.size() == 0) {
                             tech.parkindicator = "Parking full..!!";
                             tech.addpark();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             tech.park();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             System.out.println("[ts# --> Standard, th# --> Handicapped, tl# --> Long vehicle]");
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             techslots.allslots();
+                            System.out.println("-------------------------------------------------------------------------------------------");
 
                         } else {
                             tech.parkindicator = "Parking Available..!!";
                             tech.addpark();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             tech.park();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             System.out.println("[ts# --> Standard, th# --> Handicapped, tl# --> Long vehicle]");
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             techslots.allslots();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                         }
 
                         if (checkmedipark.size() == 0) {
                             medi.parkindicator = "Parking full..!!";
                             medi.addpark();
                             medi.park();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             System.out.println("[ms# --> Standard, mh# --> Handicapped, ml# --> Long vehicle]");
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             medislots.allslots();
+                            System.out.println("-------------------------------------------------------------------------------------------");
 
                         } else {
                             medi.parkindicator = "Parking Available..!!";
                             medi.addpark();
                             medi.park();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             System.out.println("[ms# --> Standard, mh# --> Handicapped, ml# --> Long vehicle]");
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             medislots.allslots();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                         }
 
                         if (checkartspark.size() == 0) {
                             arts.parkindicator = "Parking full..!!";
                             arts.addpark();
                             arts.park();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             System.out.println("[as# --> Standard, ah# --> Handicapped, al# --> Long vehicle]");
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             artsslots.allslots();
 
                         } else {
                             arts.parkindicator = "Parking Available..!!";
                             arts.addpark();
                             arts.park();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             System.out.println("[as# --> Standard, ah# --> Handicapped, al# --> Long vehicle]");
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             artsslots.allslots();
                         }
                     } else if (staffwork == 4) {
@@ -344,11 +368,13 @@ public class Main {
                 while (true) {
 
                     /*this is carowner's work selecting part*/
+                    System.out.println("-------------------------------------------------------------------------------------------");
                     System.out.println("1 View park");
                     System.out.println("2 Select a slot");
                     System.out.println("3 Exit from park");
                     System.out.println("4 View slot details");
                     System.out.println("5 Back");
+                    System.out.println("-------------------------------------------------------------------------------------------");
                     Scanner ownerwork = new Scanner(System.in);
                     System.out.println("What do you want ?");
                     int carownerwork = ownerwork.nextInt();
@@ -359,46 +385,66 @@ public class Main {
                         if (checktechpark.size() == 0) {
                             tech.parkindicator = "Parking full..!!";
                             tech.addpark();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             tech.park();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             System.out.println("[ts# --> Standard, th# --> Handicapped, tl# --> Long vehicle]");
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             techslots.allslots();
+                            System.out.println("-------------------------------------------------------------------------------------------");
 
                         } else {
                             tech.parkindicator = "Parking Available..!!";
                             tech.addpark();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             tech.park();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             System.out.println("[ts# --> Standard, th# --> Handicapped, tl# --> Long vehicle]");
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             techslots.allslots();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                         }
 
                         if (checkmedipark.size() == 0) {
                             medi.parkindicator = "Parking full..!!";
                             medi.addpark();
                             medi.park();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             System.out.println("[ms# --> Standard, mh# --> Handicapped, ml# --> Long vehicle]");
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             medislots.allslots();
+                            System.out.println("-------------------------------------------------------------------------------------------");
 
                         } else {
                             medi.parkindicator = "Parking Available..!!";
                             medi.addpark();
                             medi.park();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             System.out.println("[ms# --> Standard, mh# --> Handicapped, ml# --> Long vehicle]");
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             medislots.allslots();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                         }
 
                         if (checkartspark.size() == 0) {
                             arts.parkindicator = "Parking full..!!";
                             arts.addpark();
                             arts.park();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             System.out.println("[as# --> Standard, ah# --> Handicapped, al# --> Long vehicle]");
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             artsslots.allslots();
+
 
                         } else {
                             arts.parkindicator = "Parking Available..!!";
                             arts.addpark();
                             arts.park();
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             System.out.println("[as# --> Standard, ah# --> Handicapped, al# --> Long vehicle]");
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             artsslots.allslots();
+
                         }
                     } else if (carownerwork == 2) { //select slot
                         /*check car owner id when user select slot*/
@@ -411,7 +457,9 @@ public class Main {
                             if (owner.carowner.containsKey(bookid)) {
                                 l = 0;
                             } else {
+                                System.out.println("-------------------------------------------------------------------------------------------");
                                 System.out.println("check your ID and enter again..!!");
+                                System.out.println("-------------------------------------------------------------------------------------------");
                                 l = 1;
                             }
                         }
@@ -433,7 +481,9 @@ public class Main {
                             artsslots.bookslot();
                             checkartspark.remove(slotid);
                         } else {
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             System.out.println("Invalid id..!!");
+                            System.out.println("-------------------------------------------------------------------------------------------");
                         }
 
 
@@ -452,7 +502,9 @@ public class Main {
                                 owner.removeowner();
                                 i = 0;
                             } else {
+                                System.out.println("-------------------------------------------------------------------------------------------");
                                 System.out.println("Check your ID and enter again..!!");
+                                System.out.println("-------------------------------------------------------------------------------------------");
                                 i = 1;
                             }
                         }
@@ -476,7 +528,9 @@ public class Main {
                             checkartspark.add(slotid);
                         } else {
 
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             System.out.println("Invalid id..!!");
+                            System.out.println("-------------------------------------------------------------------------------------------");
                         }
                     } else if (carownerwork == 4) { //view slot details
 
@@ -496,16 +550,15 @@ public class Main {
                             artsslots.slotid = slotid;
                             artsslots.slotdetails();
                         } else {
-
+                            System.out.println("-------------------------------------------------------------------------------------------");
                             System.out.println("Invalid id..!!");
+                            System.out.println("-------------------------------------------------------------------------------------------");
                         }
 
                     } else if (carownerwork == 5) {
                         break;
 
-                    } else {
-                        System.out.println("Invalid input...!!");
-                    }
+                    } 
                 }
             }
         }
