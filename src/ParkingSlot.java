@@ -36,6 +36,10 @@ import java.util.HashMap;
             allslots.put(slotid+"("+slottype+")","Available");
         }
 
+        public void slotdetails(){
+            System.out.println(parkingslot.get(slotid));
+        }
+
 
     }
 
