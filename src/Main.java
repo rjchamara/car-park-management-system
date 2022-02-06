@@ -478,7 +478,12 @@ public class Main {
                     System.out.println("invalid id..!!");
                 }
 
-            }
+            }else if (carownerwork == 5){
+                    break;
+
+                } else {
+                    System.out.println("invalid input...!!");
+                }
             }
         }
     }
