@@ -182,6 +182,8 @@ public class Main {
                 int staffwork = myObj.nextInt();
 
                 if (staffwork == 1) { //add car owner part
+
+                    /*get inputs for car owner details*/
                     Scanner detail = new Scanner(System.in);
                     System.out.println("Enter car owner ID.");
                     String ownerid = detail.nextLine();
@@ -198,7 +200,7 @@ public class Main {
 
                 }else if (staffwork == 3) { //view park
 
-
+                    /*from this part print all parks,parking slots and check availability of park using park checking array*/
                     if (checktechpark.size() == 0) {
                         tech.parkindicator = "Parking full..!!";
                         tech.addpark();
@@ -238,14 +240,14 @@ public class Main {
                         artsslots.allslots();
                     }
                 }
-                else if (staffwork == 4){
+                else if (staffwork == 4){ // back from staff side
                     break;
 
                 }
-                else {
+                else { // print "invalid input..!!" when input incorrect number
                     System.out.println("Invalid input...!!");
                 }
-                
+
             }
         }
     }

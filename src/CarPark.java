@@ -1,6 +1,6 @@
 import java.util.HashMap;
 
-public class CarPark {
+public class CarPark { // car park class
     String faculty;
     String parkid;
     String entrancegps;
@@ -10,13 +10,13 @@ public class CarPark {
     HashMap<String, String> allparks = new HashMap<>();
 
 
-    public void addpark(){
+    public void addpark(){ // method for add car park and set availability of park
 
         allparks.put(faculty+" Park. "+"(ID : "+parkid+")",parkindicator);
 
     }
 
-    public void park(){
+    public void park(){ //print details of car park
 
         for (String i : allparks.keySet()) {
             System.out.println( i + " ---> " + allparks.get(i));
