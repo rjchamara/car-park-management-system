@@ -195,327 +195,315 @@ public class Main {
         System.out.println(checkmedipark);
         System.out.println(checkartspark);
 
-       CarOwner owner = new CarOwner();
+        CarOwner owner = new CarOwner();
 
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
 
+        while (true) {
+            System.out.println("1 staff member."); // selecting part of car owner and staff
+            System.out.println("2 car owner.");
 
-        System.out.println("1 staff member."); // selecting part of car owner and staff
-        System.out.println("2 car owner.");
+
+            System.out.println("Are you ?");
+            int user = myObj.nextInt();
+
+            if (user == 1) { //staff side
+
+                int j = 1;
+                int k = 0;
+                while (j == 1) {
+                    /*this is staff password checking part*/
+                    Scanner staffpw = new Scanner(System.in);
+                    System.out.println("Enter your Password.");
+                    String pw = staffpw.nextLine();
+
+                    if (password.contains(pw)) {
+                        j = 0;
+                    } else {
+                        System.out.println("Your password is incorrect..!!");
+                        System.out.println("1 enter again.");
+                        System.out.println("2 back");
+                        System.out.println("what do you want?");
+                        Scanner pwback = new Scanner(System.in);
+                        int pwb = pwback.nextInt();
+                        if (pwb == 2) {
+                            k = 1;
+                            break;
+                        } else {
+                            j = 1;
+                        }
+                    }
+                }
 
 
-        System.out.println("Are you ?");
-        int user = myObj.nextInt();
+                while (true) {
 
-        if (user == 1) { //staff side
-
-            int j=1;
-            int k=0;
-            while (j==1) {
-                /*this is staff password checking part*/
-                Scanner staffpw = new Scanner(System.in);
-                System.out.println("Enter your Password.");
-                String  pw = staffpw.nextLine();
-
-                if (password.contains(pw)) {
-                    j=0;
-                } else {
-                    System.out.println("Your password is incorrect..!!");
-                    System.out.println("1 enter again.");
-                    System.out.println("2 back");
-                    System.out.println("what do you want?");
-                    Scanner pwback = new Scanner(System.in);
-                    int  pwb = pwback.nextInt();
-                    if (pwb ==  2) {
-                        k=1;
+                    if (k == 1) { //this id go back part when user select back option in the password checking part
                         break;
-                    }else {
-                        j=1;
                     }
 
+                    /*this is a selecting part of staff's work*/
+                    System.out.println("1 add car owner.");
+                    System.out.println("2 view all owners.");
+                    System.out.println("3 view park.");
+                    System.out.println("4 change password.");
+                    System.out.println("5 back.");
+                    System.out.println("what do you want ?");
 
+                    int staffwork = myObj.nextInt();
+
+                    if (staffwork == 1) { //add car owner part
+
+                        /*get inputs for car owner details*/
+                        Scanner detail = new Scanner(System.in);
+                        System.out.println("Enter car owner ID.");
+                        String ownerid = detail.nextLine();
+                        System.out.println("Enter car owner mobile number.");
+                        String mobile = detail.nextLine();
+                        System.out.println("Enter vehicle number.");
+                        String vehiclenumber = detail.nextLine();
+                        owner.ownerid = ownerid;
+                        owner.mobile = mobile;
+                        owner.vehiclenumber = vehiclenumber;
+                        owner.enter();
+                    } else if (staffwork == 2) { //view all owners part
+                        owner.details();
+
+                    } else if (staffwork == 3) { //view park
+
+                        /*from this part print all parks,parking slots and check availability of park using park checking array*/
+                        if (checktechpark.size() == 0) {
+                            tech.parkindicator = "Parking full..!!";
+                            tech.addpark();
+                            tech.park();
+                            techslots.allslots();
+
+                        } else {
+                            tech.parkindicator = "Parking Available..!!";
+                            tech.addpark();
+                            tech.park();
+                            techslots.allslots();
+                        }
+
+                        if (checkmedipark.size() == 0) {
+                            medi.parkindicator = "Parking full..!!";
+                            medi.addpark();
+                            medi.park();
+                            medislots.allslots();
+
+                        } else {
+                            medi.parkindicator = "Parking Available..!!";
+                            medi.addpark();
+                            medi.park();
+                            medislots.allslots();
+                        }
+
+                        if (checkartspark.size() == 0) {
+                            arts.parkindicator = "Parking full..!!";
+                            arts.addpark();
+                            arts.park();
+                            artsslots.allslots();
+
+                        } else {
+                            arts.parkindicator = "Parking Available..!!";
+                            arts.addpark();
+                            arts.park();
+                            artsslots.allslots();
+                        }
+                    } else if (staffwork == 4) {
+                        /*this is staff password reset part*/
+                        Scanner oldpw = new Scanner(System.in);
+                        System.out.println("Enter old password.");
+                        String oldpass = oldpw.nextLine();
+                        if (password.contains(oldpass)) {
+                            Scanner newpw1 = new Scanner(System.in);
+                            System.out.println("Enter new password.");
+                            String newpass1 = newpw1.nextLine();
+                            Scanner newpw2 = new Scanner(System.in);
+                            System.out.println("confirm password.");
+                            String newpass2 = newpw2.nextLine();
+                            if (newpass1.equals(newpass2)) {
+                                password.remove(oldpass);
+                                password.add(newpass2);
+                                System.out.println("changing your password is successful..!!");
+                            } else {
+                                System.out.println("Your confirmation password does not match..!!");
+                            }
+
+                        } else {
+                            System.out.println("The old password you entered is incorrect..!!");
+                        }
+
+                    } else if (staffwork == 5) { // back from staff side
+                        break;
+
+                    } else { // print "invalid input..!!" when input incorrect number
+                        System.out.println("Invalid input...!!");
+                    }
                 }
             }
 
+            if (user == 2) {
 
-            while (true) {
+                while (true) {
 
-                if (k==1){ //this id go back part when user select back option in the password checking part
-                    break;
-                }
+                    /*this is carowner's work selecting part*/
+                    System.out.println("1 view park");
+                    System.out.println("2 book park");
+                    System.out.println("3 exit park");
+                    System.out.println("4 view slot details");
+                    System.out.println("5 back");
+                    Scanner ownerwork = new Scanner(System.in);
+                    System.out.println("what do you want ?");
+                    int carownerwork = ownerwork.nextInt();
 
-                /*this is a selecting part of staff's work*/
-                System.out.println("1 add car owner.");
-                System.out.println("2 view all owners.");
-                System.out.println("3 view park.");
-                System.out.println("4 change password.");
-                System.out.println("5 back.");
-                System.out.println("what do you want ?");
+                    if (carownerwork == 1) { //view park
 
-                int staffwork = myObj.nextInt();
+                        /*this is view park part from car owner side */
+                        if (checktechpark.size() == 0) {
+                            tech.parkindicator = "Parking full..!!";
+                            tech.addpark();
+                            tech.park();
+                            techslots.allslots();
 
-                if (staffwork == 1) { //add car owner part
-
-                    /*get inputs for car owner details*/
-                    Scanner detail = new Scanner(System.in);
-                    System.out.println("Enter car owner ID.");
-                    String ownerid = detail.nextLine();
-                    System.out.println("Enter car owner mobile number.");
-                    String mobile = detail.nextLine();
-                    System.out.println("Enter vehicle number.");
-                    String vehiclenumber = detail.nextLine();
-                    owner.ownerid = ownerid;
-                    owner.mobile = mobile;
-                    owner.vehiclenumber = vehiclenumber;
-                    owner.enter();
-                }else if (staffwork == 2) { //view all owners part
-                    owner.details();
-
-                }else if (staffwork == 3) { //view park
-
-                    /*from this part print all parks,parking slots and check availability of park using park checking array*/
-                    if (checktechpark.size() == 0) {
-                        tech.parkindicator = "Parking full..!!";
-                        tech.addpark();
-                        tech.park();
-                        techslots.allslots();
-
-                    } else {
-                        tech.parkindicator = "Parking Available..!!";
-                        tech.addpark();
-                        tech.park();
-                        techslots.allslots();
-                    }
-
-                    if (checkmedipark.size() == 0) {
-                        medi.parkindicator = "Parking full..!!";
-                        medi.addpark();
-                        medi.park();
-                        medislots.allslots();
-
-                    } else {
-                        medi.parkindicator = "Parking Available..!!";
-                        medi.addpark();
-                        medi.park();
-                        medislots.allslots();
-                    }
-
-                    if (checkartspark.size() == 0) {
-                        arts.parkindicator = "Parking full..!!";
-                        arts.addpark();
-                        arts.park();
-                        artsslots.allslots();
-
-                    } else {
-                        arts.parkindicator = "Parking Available..!!";
-                        arts.addpark();
-                        arts.park();
-                        artsslots.allslots();
-                    }
-                }else if (staffwork == 4){
-                    /*this is staff password reset part*/
-                    Scanner oldpw = new Scanner(System.in);
-                    System.out.println("Enter old password.");
-                    String oldpass = oldpw.nextLine();
-                    if (password.contains(oldpass)){
-                        Scanner newpw1 = new Scanner(System.in);
-                        System.out.println("Enter new password.");
-                        String newpass1 = newpw1.nextLine();
-                        Scanner newpw2 = new Scanner(System.in);
-                        System.out.println("confirm password.");
-                        String newpass2 = newpw2.nextLine();
-                        if (newpass1.equals(newpass2)){
-                            password.remove(oldpass);
-                            password.add(newpass2);
-                            System.out.println("changing your password is successful..!!");
-                        }else {
-                            System.out.println("Your confirmation password does not match..!!");
-                        }
-
-
-                    }else {
-                        System.out.println("The old password you entered is incorrect..!!" );
-                    }
-
-                }
-                else if (staffwork == 5){ // back from staff side
-                    break;
-
-                }
-                else { // print "invalid input..!!" when input incorrect number
-                    System.out.println("Invalid input...!!");
-                }
-
-            }
-        }
-
-        if (user == 2) {
-
-            while (true) {
-
-                /*this is carowner's work selecting part*/
-                System.out.println("1 view park");
-                System.out.println("2 book park");
-                System.out.println("3 exit park");
-                System.out.println("4 view slot details");
-                System.out.println("5 back");
-                Scanner ownerwork = new Scanner(System.in);
-                System.out.println("what do you want ?");
-                int carownerwork = ownerwork.nextInt();
-
-                if (carownerwork == 1) { //view park
-
-                    /*this is view park part from car owner side */
-                    if (checktechpark.size() == 0) {
-                        tech.parkindicator = "Parking full..!!";
-                        tech.addpark();
-                        tech.park();
-                        techslots.allslots();
-
-                    } else {
-                        tech.parkindicator = "Parking Available..!!";
-                        tech.addpark();
-                        tech.park();
-                        techslots.allslots();
-                    }
-
-                    if (checkmedipark.size() == 0) {
-                        medi.parkindicator = "Parking full..!!";
-                        medi.addpark();
-                        medi.park();
-                        medislots.allslots();
-
-                    } else {
-                        medi.parkindicator = "Parking Available..!!";
-                        medi.addpark();
-                        medi.park();
-                        medislots.allslots();
-                    }
-
-                    if (checkartspark.size() == 0) {
-                        arts.parkindicator = "Parking full..!!";
-                        arts.addpark();
-                        arts.park();
-                        artsslots.allslots();
-
-                    } else {
-                        arts.parkindicator = "Parking Available..!!";
-                        arts.addpark();
-                        arts.park();
-                        artsslots.allslots();
-                    }
-                }else if (carownerwork == 2) { //select slot
-                    /*check car owner id when user select slot*/
-                    int l=1;
-                    while (l==1) {
-                        Scanner owneridexit = new Scanner(System.in);
-                        System.out.println("Enter your id.");
-                        String exitid = owneridexit.nextLine();
-
-                        if (owner.carowner.containsKey(exitid)) {
-                            owner.ownerid = exitid;
-                            owner.removeowner();
-                            l=0;
                         } else {
-                            System.out.println("check your ID and enter again..!!");
-                            l=1;
+                            tech.parkindicator = "Parking Available..!!";
+                            tech.addpark();
+                            tech.park();
+                            techslots.allslots();
                         }
-                    }
-                    /*this is the part that selecting a slot according to car owner inputs*/
-                    Scanner slotidbook = new Scanner(System.in);
-                    System.out.println("Enter slot id.");
-                    String slotid = slotidbook.nextLine();
 
-                    if (checktechslot.contains(slotid)) {
-                        techslots.slotid = slotid;
-                        techslots.bookslot();
-                        checktechpark.remove(slotid);
-                    } else if (checkmedislot.contains(slotid)) {
-                        medislots.slotid = slotid;
-                        medislots.bookslot();
-                        checkmedipark.remove(slotid);
-                    }
-                    else if (checkartsslot.contains(slotid)) {
-                        artsslots.slotid = slotid;
-                        artsslots.bookslot();
-                        checkartspark.remove(slotid);
-                    }
-                    else {
-                        System.out.println("invalid id..!!");
-                    }
+                        if (checkmedipark.size() == 0) {
+                            medi.parkindicator = "Parking full..!!";
+                            medi.addpark();
+                            medi.park();
+                            medislots.allslots();
 
-
-                }else if (carownerwork == 3) { // exit from the park
-
-                    int i=1;
-                    while (i==1) {
-
-                        /*check car owner id when exit */
-                        Scanner owneridexit = new Scanner(System.in);
-                        System.out.println("Enter your id.");
-                        String exitid = owneridexit.nextLine();
-
-                        if (owner.carowner.containsKey(exitid)) {
-                            owner.ownerid = exitid;
-                            owner.removeowner();
-                            i=0;
                         } else {
-                            System.out.println("check your ID and enter again..!!");
-                            i=1;
+                            medi.parkindicator = "Parking Available..!!";
+                            medi.addpark();
+                            medi.park();
+                            medislots.allslots();
                         }
+
+                        if (checkartspark.size() == 0) {
+                            arts.parkindicator = "Parking full..!!";
+                            arts.addpark();
+                            arts.park();
+                            artsslots.allslots();
+
+                        } else {
+                            arts.parkindicator = "Parking Available..!!";
+                            arts.addpark();
+                            arts.park();
+                            artsslots.allslots();
+                        }
+                    } else if (carownerwork == 2) { //select slot
+                        /*check car owner id when user select slot*/
+                        /*int l = 1;
+                        while (l == 1) {
+                            Scanner owneridbook = new Scanner(System.in);
+                            System.out.println("Enter your id.");
+                            String bookid = owneridbook.nextLine();
+
+                            if (owner.carowner.containsKey(bookid)) {
+                                l = 0;
+                            } else {
+                                System.out.println("check your ID and enter again..!!");
+                                l = 1;
+                            }
+                        }*/
+                        /*this is the part that selecting a slot according to car owner inputs*/
+                        Scanner slotidbook = new Scanner(System.in);
+                        System.out.println("Enter slot id.");
+                        String slotid = slotidbook.nextLine();
+
+                        if (checktechslot.contains(slotid)) {
+                            techslots.slotid = slotid;
+                            techslots.bookslot();
+                            checktechpark.remove(slotid);
+                        } else if (checkmedislot.contains(slotid)) {
+                            medislots.slotid = slotid;
+                            medislots.bookslot();
+                            checkmedipark.remove(slotid);
+                        } else if (checkartsslot.contains(slotid)) {
+                            artsslots.slotid = slotid;
+                            artsslots.bookslot();
+                            checkartspark.remove(slotid);
+                        } else {
+                            System.out.println("invalid id..!!");
+                        }
+
+
+                    } else if (carownerwork == 3) { // exit from the park
+
+                        int i = 1;
+                        while (i == 1) {
+
+                            /*check car owner id when exit */
+                            Scanner owneridexit = new Scanner(System.in);
+                            System.out.println("Enter your id.");
+                            String exitid = owneridexit.nextLine();
+
+                            if (owner.carowner.containsKey(exitid)) {
+                                owner.ownerid = exitid;
+                                owner.removeowner();
+                                i = 0;
+                            } else {
+                                System.out.println("check your ID and enter again..!!");
+                                i = 1;
+                            }
+                        }
+                        /*this id the part that car owner exit from the park*/
+                        Scanner slotidexit = new Scanner(System.in);
+                        System.out.println("Enter slot id.");
+                        String slotid = slotidexit.nextLine();
+
+
+                        if (checktechslot.contains(slotid)) {
+                            techslots.slotid = slotid;
+                            techslots.exitslot();
+                            checktechpark.add(slotid);
+                        } else if (checkmedislot.contains(slotid)) {
+                            medislots.slotid = slotid;
+                            medislots.exitslot();
+                            checkmedipark.add(slotid);
+                        } else if (checkartsslot.contains(slotid)) {
+                            artsslots.slotid = slotid;
+                            artsslots.exitslot();
+                            checkartspark.add(slotid);
+                        } else {
+
+                            System.out.println("invalid id..!!");
+                        }
+                    } else if (carownerwork == 4) { //view slot details
+
+                        /*this is the part that view each slots details separately*/
+                        Scanner slotidexit = new Scanner(System.in);
+                        System.out.println("Enter slot id.");
+                        String slotid = slotidexit.nextLine();
+
+
+                        if (checktechslot.contains(slotid)) {
+                            techslots.slotid = slotid;
+                            techslots.slotdetails();
+                        } else if (checkmedislot.contains(slotid)) {
+                            medislots.slotid = slotid;
+                            medislots.slotdetails();
+                        } else if (checkartsslot.contains(slotid)) {
+                            artsslots.slotid = slotid;
+                            artsslots.slotdetails();
+                        } else {
+
+                            System.out.println("invalid id..!!");
+                        }
+
+                    } else if (carownerwork == 5) {
+                        break;
+
+                    } else {
+                        System.out.println("invalid input...!!");
                     }
-                    /*this id the part that car owner exit from the park*/
-                    Scanner slotidexit = new Scanner(System.in);
-                    System.out.println("Enter slot id.");
-                    String slotid = slotidexit.nextLine();
-
-
-                    if (checktechslot.contains(slotid)) {
-                        techslots.slotid = slotid;
-                        techslots.exitslot();
-                        checktechpark.add(slotid);
-                    } else if (checkmedislot.contains(slotid)) {
-                        medislots.slotid = slotid;
-                        medislots.exitslot();
-                        checkmedipark.add(slotid);
-                    } else if (checkartsslot.contains(slotid)) {
-                        artsslots.slotid = slotid;
-                        artsslots.exitslot();
-                        checkartspark.add(slotid);
-                    }
-                    else {
-
-                        System.out.println("invalid id..!!");
-                    }
-                }else if (carownerwork == 4){ //view slot details
-
-                    /*this is the part that view each slots details separately*/
-                Scanner slotidexit = new Scanner(System.in);
-                System.out.println("Enter slot id.");
-                String slotid = slotidexit.nextLine();
-
-
-                if (checktechslot.contains(slotid)) {
-                    techslots.slotid = slotid;
-                    techslots.slotdetails();
-                } else if (checkmedislot.contains(slotid)) {
-                    medislots.slotid = slotid;
-                    medislots.slotdetails();
-                }
-                else if (checkartsslot.contains(slotid)) {
-                    artsslots.slotid = slotid;
-                    artsslots.slotdetails();
-                }
-                else {
-
-                    System.out.println("invalid id..!!");
-                }
-
-            }else if (carownerwork == 5){
-                    break;
-
-                } else {
-                    System.out.println("invalid input...!!");
                 }
             }
         }
