@@ -431,6 +431,23 @@ public class Main {
 
                 }else if (carownerwork == 3) { // exit from the park
 
+                    int i=1;
+                    while (i==1) {
+
+                        /*check car owner id when exit */
+                        Scanner owneridexit = new Scanner(System.in);
+                        System.out.println("Enter your id.");
+                        String exitid = owneridexit.nextLine();
+
+                        if (owner.carowner.containsKey(exitid)) {
+                            owner.ownerid = exitid;
+                            owner.removeowner();
+                            i=0;
+                        } else {
+                            System.out.println("check your ID and enter again..!!");
+                            i=1;
+                        }
+                    }
                     /*this id the part that car owner exit from the park*/
                     Scanner slotidexit = new Scanner(System.in);
                     System.out.println("Enter slot id.");
