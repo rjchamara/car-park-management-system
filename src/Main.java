@@ -181,7 +181,9 @@ public class Main {
         checkartsslot.add(artsslots.slotid);
         checkartspark.add(artsslots.slotid);
 
-        
+        System.out.println("===========================================================================================");
+        System.out.println("                                CAR PARK MANAGEMENT SYSTEM");
+        System.out.println("===========================================================================================");
 
         CarOwner owner = new CarOwner();
 
