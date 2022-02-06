@@ -404,7 +404,23 @@ public class Main {
                         arts.park();
                         artsslots.allslots();
                     }
-                }else if (carownerwork == 2) { //select park
+                }else if (carownerwork == 2) { //select slot
+                    /*check car owner id when user select slot*/
+                    int l=1;
+                    while (l==1) {
+                        Scanner owneridexit = new Scanner(System.in);
+                        System.out.println("Enter your id.");
+                        String exitid = owneridexit.nextLine();
+
+                        if (owner.carowner.containsKey(exitid)) {
+                            owner.ownerid = exitid;
+                            owner.removeowner();
+                            l=0;
+                        } else {
+                            System.out.println("check your ID and enter again..!!");
+                            l=1;
+                        }
+                    }
                     /*this is the part that selecting a slot according to car owner inputs*/
                     Scanner slotidbook = new Scanner(System.in);
                     System.out.println("Enter slot id.");
@@ -471,7 +487,7 @@ public class Main {
 
                         System.out.println("invalid id..!!");
                     }
-                }else if (carownerwork == 4){
+                }else if (carownerwork == 4){ //view slot details
 
                     /*this is the part that view each slots details separately*/
                 Scanner slotidexit = new Scanner(System.in);
