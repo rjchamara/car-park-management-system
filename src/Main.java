@@ -155,7 +155,7 @@ public class Main {
         System.out.println(checkmedipark);
         System.out.println(checkartspark);
 
-       /* CarOwner owner = new CarOwner();
+       CarOwner owner = new CarOwner();
 
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
 
@@ -173,7 +173,7 @@ public class Main {
             while (true) {
 
                 /*this is a selecting part of staff's work*/
-               /* System.out.println("1 add car owner.");
+                System.out.println("1 add car owner.");
                 System.out.println("2 view all owners.");
                 System.out.println("3 view park.");
                 System.out.println("4 back.");
@@ -238,10 +238,13 @@ public class Main {
                         artsslots.allslots();
                     }
                 }
+                else if (staffwork == 4){
+                    break;
 
+                }
 
 
             }
-        }*/
+        }
     }
 }
