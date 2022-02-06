@@ -141,6 +141,20 @@ public class Main {
         checkartsslot.add(artsslots.slotid);
         checkartspark.add(artsslots.slotid);
 
+        tech.park();
+        techslots.allslots();
+        medi.park();
+        medislots.allslots();
+        arts.park();
+        artsslots.allslots();
+
+        System.out.println(checktechslot);
+        System.out.println(checkmedislot);
+        System.out.println(checkartsslot);
+        System.out.println(checktechpark);
+        System.out.println(checkmedipark);
+        System.out.println(checkartspark);
+
         CarOwner owner = new CarOwner();
 
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
