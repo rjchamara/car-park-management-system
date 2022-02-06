@@ -23,7 +23,7 @@ public class Main {
 
         CarPark tech = new CarPark(); // technology faculty car park
 
-        tech.faculty = "Faculty of Technology ";
+        tech.faculty = "Faculty of Technology";
         tech.parkid = "tech1";
         tech.entrancegps = "6.9364° N, 79.8486° E";
         tech.exitgps = "6.9360° N, 79.8486° E";
@@ -263,6 +263,7 @@ public class Main {
                         owner.vehiclenumber = vehiclenumber;
                         owner.enter();
                     } else if (staffwork == 2) { //view all owners part
+                        System.out.println("-------------------------------------------------------------------------------------------");
                         owner.details();
 
                     } else if (staffwork == 3) { //view park
@@ -558,7 +559,7 @@ public class Main {
                     } else if (carownerwork == 5) {
                         break;
 
-                    } 
+                    }
                 }
             }
         }
