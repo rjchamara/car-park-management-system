@@ -150,7 +150,14 @@ public class Main {
         checkartsslot.add(artsslots.slotid);
         checkartspark.add(artsslots.slotid);
 
-       
+        artsslots.slotid = "ah1";
+        artsslots.slotgps = "6.9364° N, 79.8487° E";
+        artsslots.slottype = "handicapped";
+        artsslots.slotimformation = "Near to canteen";
+        artsslots.addslot();
+        checkartsslot.add(artsslots.slotid);
+        checkartspark.add(artsslots.slotid);
+
         tech.park();
         techslots.allslots();
         medi.park();
