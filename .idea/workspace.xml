@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e29b79d-732e-4934-bb2b-4892707ae65c" name="Changes" comment="" />
+    <list default="true" id="7e29b79d-732e-4934-bb2b-4892707ae65c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,7 +109,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b60987c5-913f-489a-b84a-80e8d7ab1610" name="Changes" comment="" />
+      <changelist id="7e29b79d-732e-4934-bb2b-4892707ae65c" name="Changes" comment="" />
       <created>1643825977985</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

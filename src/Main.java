@@ -14,6 +14,13 @@ public class Main {
         ArrayList<String> checkmedipark = new ArrayList<>();
         ArrayList<String> checkartspark = new ArrayList<>();
 
+        ArrayList<String> password = new ArrayList<>(); //arraylist for store the passwords
+
+        /*add passwords*/
+        password.add("abc123");
+        password.add("abc234");
+        password.add("abc345");
+
         CarPark tech = new CarPark(); // technology faculty car park
 
         tech.faculty = "Faculty of Technology ";
@@ -194,8 +201,40 @@ public class Main {
 
         if (user == 1) { //staff side
 
+            int j=1;
+            int k=0;
+            while (j==1) {
+                /*this is staff password checking part*/
+                Scanner staffpw = new Scanner(System.in);
+                System.out.println("Enter your Password.");
+                String  pw = staffpw.nextLine();
+
+                if (password.contains(pw)) {
+                    j=0;
+                } else {
+                    System.out.println("Your password is incorrect..!!");
+                    System.out.println("1 enter again.");
+                    System.out.println("2 back");
+                    System.out.println("what do you want?");
+                    Scanner pwback = new Scanner(System.in);
+                    int  pwb = pwback.nextInt();
+                    if (pwb ==  2) {
+                        k=1;
+                        break;
+                    }else {
+                        j=1;
+                    }
+
+
+                }
+            }
+
 
             while (true) {
+
+                if (k==1){ //this id go back part when user select back option in the password checking part
+                    break;
+                }
 
                 /*this is a selecting part of staff's work*/
                 System.out.println("1 add car owner.");
