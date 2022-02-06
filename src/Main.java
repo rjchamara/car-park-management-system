@@ -429,9 +429,9 @@ public class Main {
                     }
 
 
-                }else if (carownerwork == 3) {
+                }else if (carownerwork == 3) { // exit from the park
 
-
+                    /*this id the part that car owner exit from the park*/
                     Scanner slotidexit = new Scanner(System.in);
                     System.out.println("Enter slot id.");
                     String slotid = slotidexit.nextLine();
@@ -445,16 +445,15 @@ public class Main {
                         medislots.slotid = slotid;
                         medislots.exitslot();
                         checkmedipark.add(slotid);
-                    }
-                    else if (checkartsslot.contains(slotid)) {
+                    } else if (checkartsslot.contains(slotid)) {
                         artsslots.slotid = slotid;
                         artsslots.exitslot();
                         checkartspark.add(slotid);
-                    }
-                    else {
+                    } else {
 
                         System.out.println("invalid id..!!");
                     }
+                }
             }
         }
     }
