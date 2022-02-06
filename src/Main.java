@@ -363,7 +363,48 @@ public class Main {
                 System.out.println("what do you want ?");
                 int carownerwork = ownerwork.nextInt();
 
+                if (carownerwork == 1) { //view park
 
+                    /*this is view park part from car owner side */
+                    if (checktechpark.size() == 0) {
+                        tech.parkindicator = "Parking full..!!";
+                        tech.addpark();
+                        tech.park();
+                        techslots.allslots();
+
+                    } else {
+                        tech.parkindicator = "Parking Available..!!";
+                        tech.addpark();
+                        tech.park();
+                        techslots.allslots();
+                    }
+
+                    if (checkmedipark.size() == 0) {
+                        medi.parkindicator = "Parking full..!!";
+                        medi.addpark();
+                        medi.park();
+                        medislots.allslots();
+
+                    } else {
+                        medi.parkindicator = "Parking Available..!!";
+                        medi.addpark();
+                        medi.park();
+                        medislots.allslots();
+                    }
+
+                    if (checkartspark.size() == 0) {
+                        arts.parkindicator = "Parking full..!!";
+                        arts.addpark();
+                        arts.park();
+                        artsslots.allslots();
+
+                    } else {
+                        arts.parkindicator = "Parking Available..!!";
+                        arts.addpark();
+                        arts.park();
+                        artsslots.allslots();
+                    }
+                }
             }
         }
     }
