@@ -240,7 +240,8 @@ public class Main {
                 System.out.println("1 add car owner.");
                 System.out.println("2 view all owners.");
                 System.out.println("3 view park.");
-                System.out.println("4 back.");
+                System.out.println("4 change password.");
+                System.out.println("5 back.");
                 System.out.println("what do you want ?");
 
                 int staffwork = myObj.nextInt();
@@ -303,8 +304,33 @@ public class Main {
                         arts.park();
                         artsslots.allslots();
                     }
+                }else if (staffwork == 4){
+                    /*this is staff password reset part*/
+                    Scanner oldpw = new Scanner(System.in);
+                    System.out.println("Enter old password.");
+                    String oldpass = oldpw.nextLine();
+                    if (password.contains(oldpass)){
+                        Scanner newpw1 = new Scanner(System.in);
+                        System.out.println("Enter new password.");
+                        String newpass1 = newpw1.nextLine();
+                        Scanner newpw2 = new Scanner(System.in);
+                        System.out.println("confirm password.");
+                        String newpass2 = newpw2.nextLine();
+                        if (newpass1.equals(newpass2)){
+                            password.remove(oldpass);
+                            password.add(newpass2);
+                            System.out.println("changing your password is successful..!!");
+                        }else {
+                            System.out.println("Your confirmation password does not match..!!");
+                        }
+
+
+                    }else {
+                        System.out.println("The old password you entered is incorrect..!!" );
+                    }
+
                 }
-                else if (staffwork == 4){ // back from staff side
+                else if (staffwork == 5){ // back from staff side
                     break;
 
                 }
