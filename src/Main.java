@@ -449,11 +449,36 @@ public class Main {
                         artsslots.slotid = slotid;
                         artsslots.exitslot();
                         checkartspark.add(slotid);
-                    } else {
+                    }
+                    else {
 
                         System.out.println("invalid id..!!");
                     }
+                }else if (carownerwork == 4){
+
+                    /*this is the part that view each slots details separately*/
+                Scanner slotidexit = new Scanner(System.in);
+                System.out.println("Enter slot id.");
+                String slotid = slotidexit.nextLine();
+
+
+                if (checktechslot.contains(slotid)) {
+                    techslots.slotid = slotid;
+                    techslots.slotdetails();
+                } else if (checkmedislot.contains(slotid)) {
+                    medislots.slotid = slotid;
+                    medislots.slotdetails();
                 }
+                else if (checkartsslot.contains(slotid)) {
+                    artsslots.slotid = slotid;
+                    artsslots.slotdetails();
+                }
+                else {
+
+                    System.out.println("invalid id..!!");
+                }
+
+            }
             }
         }
     }
