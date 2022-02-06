@@ -192,7 +192,7 @@ public class Main {
         System.out.println("Are you ?");
         int user = myObj.nextInt();
 
-        if (user == 1) {
+        if (user == 1) { //staff side
 
 
             while (true) {
