@@ -200,8 +200,8 @@ public class Main {
         Scanner myObj = new Scanner(System.in);  // Create a Scanner object
 
         while (true) {
-            System.out.println("1 staff member."); // selecting part of car owner and staff
-            System.out.println("2 car owner.");
+            System.out.println("1 Staff member."); // selecting part of car owner and staff
+            System.out.println("2 Car owner.");
 
 
             System.out.println("Are you ?");
@@ -221,9 +221,9 @@ public class Main {
                         j = 0;
                     } else {
                         System.out.println("Your password is incorrect..!!");
-                        System.out.println("1 enter again.");
-                        System.out.println("2 back");
-                        System.out.println("what do you want?");
+                        System.out.println("1 Enter again.");
+                        System.out.println("2 Back");
+                        System.out.println("What do you want?");
                         Scanner pwback = new Scanner(System.in);
                         int pwb = pwback.nextInt();
                         if (pwb == 2) {
@@ -243,12 +243,12 @@ public class Main {
                     }
 
                     /*this is a selecting part of staff's work*/
-                    System.out.println("1 add car owner.");
-                    System.out.println("2 view all owners.");
-                    System.out.println("3 view park.");
-                    System.out.println("4 change password.");
-                    System.out.println("5 back.");
-                    System.out.println("what do you want ?");
+                    System.out.println("1 Add car owner.");
+                    System.out.println("2 View all owners.");
+                    System.out.println("3 View park.");
+                    System.out.println("4 Change password.");
+                    System.out.println("5 Back.");
+                    System.out.println("What do you want ?");
 
                     int staffwork = myObj.nextInt();
 
@@ -326,12 +326,12 @@ public class Main {
                             System.out.println("Enter new password.");
                             String newpass1 = newpw1.nextLine();
                             Scanner newpw2 = new Scanner(System.in);
-                            System.out.println("confirm password.");
+                            System.out.println("Confirm password.");
                             String newpass2 = newpw2.nextLine();
                             if (newpass1.equals(newpass2)) {
                                 password.remove(oldpass);
                                 password.add(newpass2);
-                                System.out.println("changing your password is successful..!!");
+                                System.out.println("Changing your password is successful..!!");
                             } else {
                                 System.out.println("Your confirmation password does not match..!!");
                             }
@@ -354,13 +354,13 @@ public class Main {
                 while (true) {
 
                     /*this is carowner's work selecting part*/
-                    System.out.println("1 view park");
-                    System.out.println("2 book park");
-                    System.out.println("3 exit park");
-                    System.out.println("4 view slot details");
-                    System.out.println("5 back");
+                    System.out.println("1 View park");
+                    System.out.println("2 Select a slot");
+                    System.out.println("3 Exit from park");
+                    System.out.println("4 View slot details");
+                    System.out.println("5 Back");
                     Scanner ownerwork = new Scanner(System.in);
-                    System.out.println("what do you want ?");
+                    System.out.println("What do you want ?");
                     int carownerwork = ownerwork.nextInt();
 
                     if (carownerwork == 1) { //view park
@@ -443,7 +443,7 @@ public class Main {
                             artsslots.bookslot();
                             checkartspark.remove(slotid);
                         } else {
-                            System.out.println("invalid id..!!");
+                            System.out.println("Invalid id..!!");
                         }
 
 
@@ -462,7 +462,7 @@ public class Main {
                                 owner.removeowner();
                                 i = 0;
                             } else {
-                                System.out.println("check your ID and enter again..!!");
+                                System.out.println("Check your ID and enter again..!!");
                                 i = 1;
                             }
                         }
@@ -486,7 +486,7 @@ public class Main {
                             checkartspark.add(slotid);
                         } else {
 
-                            System.out.println("invalid id..!!");
+                            System.out.println("Invalid id..!!");
                         }
                     } else if (carownerwork == 4) { //view slot details
 
@@ -507,14 +507,14 @@ public class Main {
                             artsslots.slotdetails();
                         } else {
 
-                            System.out.println("invalid id..!!");
+                            System.out.println("Invalid id..!!");
                         }
 
                     } else if (carownerwork == 5) {
                         break;
 
                     } else {
-                        System.out.println("invalid input...!!");
+                        System.out.println("Invalid input...!!");
                     }
                 }
             }
