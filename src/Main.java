@@ -158,6 +158,14 @@ public class Main {
         checkartsslot.add(artsslots.slotid);
         checkartspark.add(artsslots.slotid);
 
+        artsslots.slotid = "al1";
+        artsslots.slotgps = "6.9364° N, 79.8487° E";
+        artsslots.slottype = "long vehicle";
+        artsslots.slotimformation = "length: 6m, width: 3m";
+        artsslots.addslot();
+        checkartsslot.add(artsslots.slotid);
+        checkartspark.add(artsslots.slotid);
+
         tech.park();
         techslots.allslots();
         medi.park();
