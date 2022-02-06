@@ -242,8 +242,10 @@ public class Main {
                     break;
 
                 }
-
-
+                else {
+                    System.out.println("Invalid input...!!");
+                }
+                
             }
         }
     }
