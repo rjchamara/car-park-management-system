@@ -348,5 +348,23 @@ public class Main {
 
             }
         }
+
+        if (user == 2) {
+
+            while (true) {
+
+                /*this is carowner's work selecting part*/
+                System.out.println("1 view park");
+                System.out.println("2 book park");
+                System.out.println("3 exit park");
+                System.out.println("4 view slot details");
+                System.out.println("5 back");
+                Scanner ownerwork = new Scanner(System.in);
+                System.out.println("what do you want ?");
+                int carownerwork = ownerwork.nextInt();
+
+
+            }
+        }
     }
 }
