@@ -429,7 +429,32 @@ public class Main {
                     }
 
 
-                }
+                }else if (carownerwork == 3) {
+
+
+                    Scanner slotidexit = new Scanner(System.in);
+                    System.out.println("Enter slot id.");
+                    String slotid = slotidexit.nextLine();
+
+
+                    if (checktechslot.contains(slotid)) {
+                        techslots.slotid = slotid;
+                        techslots.exitslot();
+                        checktechpark.add(slotid);
+                    } else if (checkmedislot.contains(slotid)) {
+                        medislots.slotid = slotid;
+                        medislots.exitslot();
+                        checkmedipark.add(slotid);
+                    }
+                    else if (checkartsslot.contains(slotid)) {
+                        artsslots.slotid = slotid;
+                        artsslots.exitslot();
+                        checkartspark.add(slotid);
+                    }
+                    else {
+
+                        System.out.println("invalid id..!!");
+                    }
             }
         }
     }
